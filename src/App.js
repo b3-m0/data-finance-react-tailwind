@@ -1,5 +1,6 @@
 import React from 'react';
 import Navbar from './components/Navbar';
+<<<<<<< HEAD
 import {
   BrowserRouter as Router,
   Routes,
@@ -17,6 +18,12 @@ import WebFont from 'webfontloader';
 
 
 
+=======
+import Newsletter from './components/Newsletter';
+import { HashRouter as Router, Routes, Route } from 'react-router-dom'
+import { Home } from './pages/home'
+import { Login } from './pages/home'
+>>>>>>> 1b70751be25af9944fec5f976b99cf18e1434b92
 
 function App() {
   useEffect(() => {
@@ -29,6 +36,7 @@ function App() {
 
   return (
     <div>
+<<<<<<< HEAD
       
       <Router>
             <Navbar />
@@ -53,6 +61,19 @@ function App() {
             </Routes>
         </Router>
       
+=======
+      <Navbar />
+      <Hero />
+      <Analytics />
+      <Newsletter />
+      <Cards />
+      <Footer />
+      <Router>
+        <Routes>
+            <Route path="/" element={<Home/>}/>
+        </Routes>
+      </Router>
+>>>>>>> 1b70751be25af9944fec5f976b99cf18e1434b92
     </div>
 
     
