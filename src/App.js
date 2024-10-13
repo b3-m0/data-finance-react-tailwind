@@ -14,6 +14,8 @@ import Login from "./components/pages/login";
 import Form from "./components/pages/form";
 import { useEffect } from 'react';
 import WebFont from 'webfontloader';
+import Mentor from "./components/pages/mentor";
+
 
 
 
@@ -50,8 +52,12 @@ function App() {
                 />
                 <Route path="/form" element={<Form />}
                 />
+                <Route path="/mentor" element={<Mentor />}
+                />
             </Routes>
         </Router>
+
+        
       
     </div>
 
