@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { AiOutlineClose, AiOutlineMenu } from 'react-icons/ai';
+import { Nav, NavLink, NavMenu } from "./NavbarElements";
 
 const Navbar = () => {
   const [nav, setNav] = useState(false);
@@ -9,15 +10,45 @@ const Navbar = () => {
   };
 
   return (
-    <div className='flex justify-between items-center h-24 max-w-[1240px] mx-auto px-4 text-black'>
-      <h1 className='w-full text-3xl font-bold text-[#0007df]'>REACT.</h1>
-      <ul className='hidden md:flex'>
-        <li className='p-4'>Home</li>
-        <li className='p-4'>Company</li>
-        <li className='p-4'>Resources</li>
-        <li className='p-4'>About</li>
-        <li className='p-4'>Contact</li>
-      </ul>
+    <div style={{fontFamily: 'Mukta'}}>
+    <div className='flex justify-between items-center h-24 max-w-[1240px] mx-auto px-4 text-[#233c67]'>
+      <h1 className='w-full text-3xl font-bold text-[#233c67]'>REACT.</h1>
+      <nav>
+        <ul className='flex'>
+            <ul className="nav-menu">
+                <li>
+                <NavLink to="/company" activeClassName="active">
+                        Company
+                    </NavLink> 
+                </li>
+                <li>
+                    <NavLink to="/company" activeClassName="active">
+                        Company
+                    </NavLink>
+                </li>
+                <li>
+                    <NavLink to="/resources" activeClassName="active">
+                        Resources
+                    </NavLink>
+                </li>
+                <li>
+                    <NavLink to="/about" activeClassName="active">
+                        About
+                    </NavLink>
+                </li>
+                <li>
+                    <NavLink to="/contact" activeClassName="active">
+                        Contact Us
+                    </NavLink>
+                </li>
+                <li>
+                    <NavLink to="/home" activeClassName="active">
+                      Home
+                    </NavLink>
+                </li>
+            </ul>
+            </ul>
+        </nav>
       <div onClick={handleNav} className='block md:hidden'>
           {nav ? <AiOutlineClose size={20}/> : <AiOutlineMenu size={20} />}
       </div>
@@ -29,6 +60,7 @@ const Navbar = () => {
           <li className='p-4 border-b border-gray-600'>About</li>
           <li className='p-4'>Contact</li>
       </ul>
+    </div>
     </div>
   );
 };

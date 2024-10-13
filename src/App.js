@@ -1,21 +1,63 @@
 import React from 'react';
-import Analytics from './components/Analytics';
-import Cards from './components/Cards';
-import Footer from './components/Footer';
-import Hero from './components/Hero';
 import Navbar from './components/Navbar';
-import Newsletter from './components/Newsletter';
+import {
+  BrowserRouter as Router,
+  Routes,
+  Route,
+} from "react-router-dom";
+import Home from "./components/pages/home";
+import Company from "./components/pages/company";
+import Resources from "./components/pages/resources";
+import About from "./components/pages/about";
+import Contact from "./components/pages/contact";
+import Login from "./components/pages/login";
+import Form from "./components/pages/form";
+import { useEffect } from 'react';
+import WebFont from 'webfontloader';
+
+
+
 
 function App() {
+  useEffect(() => {
+    WebFont.load({
+        google: {
+            families: ['Droid Sans', 'Chilanka', 'Mukta'],
+        },
+    });
+}, []);
+
   return (
     <div>
-      <Navbar />
-      <Hero />
-      <Analytics />
-      <Newsletter />
-      <Cards />
-      <Footer />
+      
+      <Router>
+            <Navbar />
+            <Routes>
+                <Route path="/" element={<Home />} />
+                <Route path="/company" element={<Company />} />
+                <Route
+                    path="/resources"
+                    element={<Resources />}
+                />
+                <Route path="/about" element={<About />} />
+                <Route
+                    path="/contact"
+                    element={<Contact />}
+                />
+                <Route path="/login" element={<Login />}
+                />
+                <Route path="/home" element={<Home />}
+                />
+                <Route path="/form" element={<Form />}
+                />
+            </Routes>
+        </Router>
+      
     </div>
+
+    
+    
+    
   );
 }
 
