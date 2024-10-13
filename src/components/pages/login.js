@@ -6,7 +6,7 @@ import FormControl from '@mui/material/FormControl';
 import Input from '@mui/material/Input';
 import InputLabel from '@mui/material/InputLabel';
 import { useNavigate } from 'react-router-dom';
-
+import Cookies from 'js-cookie';
 
 
 
@@ -20,20 +20,30 @@ const Login = () => {
         navigate('/mentor'); // Navigate to the mentor page
     };
     
-    const handleClick = () => {
-        var body = {
-          email: email,
-          password: password
-        };
-        
-        axios.post('http://localhost:2500', body).then(function (response) {
-          console.log(response);
-        }).catch(function (error) {
-          console.log(error);
-        });
+    const handleClick = async (useremail, userpassword) => {
+      console.log("TEST");
+      /*
+      axios.post('http://localhost:2500/users/login', body).then(function (response) {
+        console.log(response);
+      }).catch(function (error) {
+        console.log(error);
+      });*/
 
-        
-      }  
+      const response = await axios.post(
+        'http://localhost:2500/users/login',
+        { email: useremail, password: userpassword },
+        { headers: {'Content-Type': 'application/json'}}
+      )
+      console.log(response.data);
+    }  
+    async function doClick(useremail, userpassword) {
+      const response = await axios.post('http://localhost:2500/users/login', {
+        email: useremail, password: userpassword }, {headers: {'Content-Type': 'application/json'}}
+      )
+      //console.log(response.data);
+      Cookies.set('userID', response.data);
+      navigate('/mentor');
+    } 
     
     return (
         <Box
@@ -65,13 +75,11 @@ const Login = () => {
           />
         </FormControl>
         </div>
-
         <Button
             variant="contained"
             color="primary"
-            //onClick={handleClick}
             className='bg-white text-orange-600 font-semibold py-2 px-4 rounded-full shadow-md hover:bg-orange-200 transition duration-300' 
-            onClick={goToMentor}>
+            onClick={(e) => {doClick(email, password);}}>
 
             Submit
         </Button>

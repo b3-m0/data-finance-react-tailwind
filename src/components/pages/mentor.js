@@ -10,6 +10,17 @@ import Paper from '@mui/material/Paper';
 const Mentor = () => {
     const mentorArray = [
         {
+            "id": 1,
+            "name": "Tyler",
+            "hobbies": "cooking,reading,coding",
+            "food": "pasta,noodles",
+            "music": "nothing",
+            "tvshows": "squidgame,breakingbad",
+            "interests": "everything",
+            "careers": "lawyer",
+            "distance": 0
+        },
+        {
             "id": 0,
             "name": "Edward",
             "hobbies": "coding,hiking",
@@ -18,7 +29,7 @@ const Mentor = () => {
             "tvshows": "sherlock,squidgame",
             "interests": "nothing",
             "careers": "lawyer,firefighter",
-            "distance": 0
+            "distance": 150.66613222386255
         },
         {
             "id": 2,
@@ -29,18 +40,7 @@ const Mentor = () => {
             "tvshows": "breakingbad,sherlock",
             "interests": "nothing",
             "careers": "vet",
-            "distance": 50.38295988921894
-        },
-        {
-            "id": 1,
-            "name": "Tyler",
-            "hobbies": "cooking,reading,coding",
-            "food": "pasta,noodles",
-            "music": "nothing",
-            "tvshows": "squidgame,breakingbad",
-            "interests": "everything",
-            "careers": "lawyer",
-            "distance": 150.66613222386255
+            "distance": 104.38623147779435
         },
         {
             "id": 3,
@@ -51,7 +51,7 @@ const Mentor = () => {
             "tvshows": "none",
             "interests": "everything",
             "careers": "engineer",
-            "distance": 3830.439290029829
+            "distance": 3827.311296108618
         }
     ];
 
