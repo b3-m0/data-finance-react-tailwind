@@ -89,10 +89,90 @@ const Form = () => {
             margin="normal"
         />
 
-        <Typography variant="h6" gutterBottom>Mentor/mentee?</Typography>
+        <Typography variant="h6" gutterBottom>Mentor/mentee</Typography>
         
         <TextField
             required
+            label="Enter something"
+            variant="outlined"
+            fullWidth
+            value={inputValue}
+            onChange={(e) => setInputValue(e.target.value)}
+            margin="normal"
+        />
+
+        //dropdown
+        <Typography variant="h6" gutterBottom>Gender</Typography>
+        
+        <TextField
+            required
+            label="Enter something"
+            variant="outlined"
+            fullWidth
+            value={inputValue}
+            onChange={(e) => setInputValue(e.target.value)}
+            margin="normal"
+        />
+
+        <Typography variant="h6" gutterBottom>Interests</Typography>
+        
+        <TextField
+            label="Enter something"
+            variant="outlined"
+            fullWidth
+            value={inputValue}
+            onChange={(e) => setInputValue(e.target.value)}
+            margin="normal"
+        />
+
+        <Typography variant="h6" gutterBottom>Food</Typography>
+        
+        <TextField
+            label="Enter something"
+            variant="outlined"
+            fullWidth
+            value={inputValue}
+            onChange={(e) => setInputValue(e.target.value)}
+            margin="normal"
+        />
+
+        <Typography variant="h6" gutterBottom>Music</Typography>
+        
+        <TextField
+            label="Enter something"
+            variant="outlined"
+            fullWidth
+            value={inputValue}
+            onChange={(e) => setInputValue(e.target.value)}
+            margin="normal"
+        />
+
+        <Typography variant="h6" gutterBottom>Shows</Typography>
+        
+        <TextField
+            label="Enter something"
+            variant="outlined"
+            fullWidth
+            value={inputValue}
+            onChange={(e) => setInputValue(e.target.value)}
+            margin="normal"
+        />
+
+        <Typography variant="h6" gutterBottom>Hobbies</Typography>
+        
+        <TextField
+            label="Enter something"
+            variant="outlined"
+            fullWidth
+            value={inputValue}
+            onChange={(e) => setInputValue(e.target.value)}
+            margin="normal"
+        />
+
+
+        <Typography variant="h6" gutterBottom>Careers</Typography>
+        
+        <TextField
             label="Enter something"
             variant="outlined"
             fullWidth

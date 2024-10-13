@@ -6,7 +6,7 @@ import Hero from './components/Hero';
 import Navbar from './components/Navbar';
 import Newsletter from './components/Newsletter';
 
-    export function Home() {
+  export function Home() {
        function App() {
   return (
     <div>
@@ -19,5 +19,5 @@ import Newsletter from './components/Newsletter';
     </div>
   );
 }
-
+  }
 
